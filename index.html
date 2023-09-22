@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="password">
+            <h1>PASSWORD GENERATOR</h1>
+            <div class="in">
+                <input type="text" readonly placeholder="Password" id="passwordInput">
+                <div id="copymsg" class="copymsg"></div>
+                <img src="pngtree-vector-copy-icon-png-image_889395.jpg" alt="" height="23" width="23" id="copybtn">
+            </div>
+            
+        </div>
+        <div id="passwordSetting">
+            <div id="passwordLenght">
+                <p>Password Length</p>
+                <p id="passwordLenghtText">10</p>
+            </div>
+            <input type="range" min="0" max="20" id="passwordSlider">
+            <div id="input">
+                <div class="checkbox">
+                    <input type="checkbox" name="uppercase" id="uppercase" class="check">
+                    <label for="uppercase">Include Uppercase Letters</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="uppercase" id="lowercase" class="check">
+                    <label for="lowercase">Include Lowercase Letters</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="uppercase" id="number" class="check">
+                    <label for="number">Include Numbers</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="uppercase" id="symbol" class="check">
+                    <label for="symbol">Include Symbols</label>
+                </div>
+            </div>
+            <div class="strength">
+                <p id="strengthText">Strength</p>
+                <div id="strengthCircle"></div>
+            </div>
+            <button id="Generatebutton">Generate Password</button>
+            
+
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+:root{
+    --vb-yellow: hsl(52,100%,62%);
+    --vb-violet: hsl(285,91%,52%);
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(76.8deg, rgb(121, 45, 129) 3.6%, rgb(36, 31, 98) 90.4%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.password{
+    min-width: 400px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+.password h1{
+    color: rgba(255,255,255,0.8);
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    line-height: 1px;
+    word-spacing: 0.35rem;
+    margin-bottom: 1rem;
+}
+#passwordInput{
+    position: relative;
+    width: 100%;
+    appearance: none;
+    outline: none;
+    border: 0;
+    padding: 0.35rem 0.7rem;
+    background-color: black;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    color: var(--vb-yellow);
+    border-bottom: 0.25rem solid var(--vb-yellow);
+}
+#passwordInput::placeholder{
+    color: rgba(4, 255, 0, 0.5);
+}
+.in{
+    width: 100%;
+    position: relative;
+}
+#copybtn{
+    position: absolute;
+    top: 10%;
+    right: 1%;
+    cursor: pointer;
+}
+.copymsg{
+    position: absolute;
+    top: -50%;
+    right: -2%;
+    background-color: var(--vb-violet);
+    width: 3rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    display: none;
+
+}
+.active{
+    display: block;
+}
+#copybtn{
+    background-color: white;
+}
+#copymsg{
+    font-size: 0.7rem;
+    color: var(--vb-yellow);
+    font-weight: 300;
+}
+#passwordSetting{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 0.5rem;
+    gap: 1rem;
+    padding: 1rem;
+}
+#passwordLenght{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+#passwordLenght p:nth-child(1){
+    color: rgba(255,255,255,0.8);
+    line-height: 1rem;
+    letter-spacing: 0.05rem;
+    font-size: 0.95rem;
+}
+#passwordLenght p:nth-child(2){
+    color: rgba(255,255,0,0.8);
+    line-height: 1.1rem;
+    letter-spacing: 0.1rem;
+    font-size: 0.95rem;
+}
+.strength{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+#strengthCircle{
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+}
+#strengthText{
+    color: rgba(255,255,255,0.8);
+    font-size: 1rem;
+    line-height: 1rem;
+    letter-spacing: 0.05rem;
+    font-size: 0.95;
+}
+#Generatebutton{
+    appearance: none;
+    outline: 0;
+    width: 100%;
+    padding: 0.7rem 0;
+    margin: 0 auto;
+    border-bottom: 0.35rem solid var(--vb-yellow);
+    border-radius: 0.75rem;
+    background-color: var(--vb-violet);
+    letter-spacing: 1px;
+    color: var(--vb-yellow);
+    text-align: center;
+    font-size: 1rem;
+}
+#input{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    
+}
+.checkbox label{
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9rem;
+
+}
+.checkbox input{
+    appearance: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 4px;
+    border: 2px solid rgba(255,255,255,0.8);
+    position: relative;
+}
+.checkbox input:checked{
+    background-color: cyan;
+    
+}
+.checkbox input:checked::after{
+    content: "\2713";
+    position: absolute;
+    color: black;
+    font-size: 1rem;
+    font-weight: bolder;
+    top: -30%;
+}
+#passwordSlider{
+    width: 100%;
+    appearance: none;
+    background: transparent;
+    border-radius: 1rem;
+    background-image: linear-gradient(var(--vb-violet),var(--vb-violet));
+    background-repeat: no-repeat;
+    height: 0.75rem;
+    border: none;
+    outline: none;
+}
+#passwordSlider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    height: 1.4rem;
+    width: 1.4rem;
+    background-color: var(--vb-yellow);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 25px 0 var(--vb-yellow);
+
+}
+
+#passwordSlider::-webkit-slider-thumb:hover{
+    background-color: black;
+    outline: 2px solid var(--vb-yellow);
+    transition: all 0.3s;
+    
+}
+#passwordSlider:focus{
+    outline: 2px solid var(--vb-yellow);
+    box-shadow: 0 0 25px 0 var(--vb-yellow);
+}
+
+
+
+
